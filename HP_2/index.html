@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Объявите константу с целым числом числом и выведите ее в консоль в шестнадцатиричном и двочном виде.
+      //ВЫВОД В КОНСОЛЬ ОСУЩЕСТВИТЕ ПРИ ПОМОЩИ ШАБЛОННОЙ СТРОКИ, та что с `` кавычками и доларом ;)
+      const numb = 100;
+      console.log(numb.toString(16));
+      console.log(numb.toString(2));
+
+      //Используя prompt введите число как константу,
+      // затем выведите в консоль результаты операций + - * / на 2 над этим числом
+      const anyNumb = prompt("ВВЕДИТЕ ЧИСЛО", "0");
+      console.log(+anyNumb + 2);
+      console.log(anyNumb - 2);
+      console.log(anyNumb * 2);
+      console.log(anyNumb / 2);
+
+      //определити длинну строки введенной при помощи prompt и выведите длинну в консоль
+      const anyString = prompt("Введите текст");
+      console.log(anyString.length);
+
+      //Округлите число 0.51000002 до двух знаков после запятой и прибавте к нему 2, результат выведете в консоль
+      let numb2 = 0.51000002;
+      console.log(+numb2.toFixed(2) + 2);
+
+      //дано:
+      //const str = 'the quick brown fox jumps over the lazy dogs back';
+      //const str_two = 'brown fox jumps'
+      //определите с какого символа строка str_two начинается в строке str
+      // преобразуте любую из этих строк к заглавным буквам, результат выведете в консоль
+      const str = "the quick brown fox jumps over the lazy dogs back";
+      const str_two = "brown fox jumps";
+      console.log(str.toUpperCase() + " " + str.indexOf("brown", 0));
+
+      //обявите переменные
+      // a = 1, b = 2, c = 3, d = 3
+      //сравните a c b, b c c, c c d и результаты между собой таким ображом чтобы получить true используя ИЛИ не используя НЕ
+      //сравните a c b, b c c, c c d и результаты между собой таким ображом чтобы получить true используя И не используя НЕ
+      let a = 1;
+      let b = 2;
+      let c = 3;
+      let d = 3;
+      console.log(a + c + b < b + c + c || b + c + c < c + c + d);
+      console.log(a + c + b < b + c + c && b + c + c < c + c + d);
+
+      //сделайти простой пример можно в одну строку, демонстрирующий различая между == и ===
+      console.log((true == "1") + " " + (true === "1"));
+      console.log((false == "0") + " " + (false === "0"));
+
+      //также продемонстрируйте работу оператора ??
+      let name = prompt("Name");
+      let age = prompt("Age");
+      let gender = prompt("Gender");
+      console.log(name ?? age ?? gender);
+    </script>
+  </body>
+</html>
